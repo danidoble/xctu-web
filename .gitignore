@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+data/commands.json
+.env
+.env.local
+/tmp/
+.agents/
+.claude/
+graphify-out/

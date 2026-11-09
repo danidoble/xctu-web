@@ -1,0 +1,32 @@
+{
+  "name": "serial-monitor-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test:xml": "node test/xml-roundtrip.js",
+    "test:ws": "node test/ws-roundtrip.js",
+    "test:parser": "node test/parser-manager.test.js",
+    "test": "node test/xml-roundtrip.js && node test/parser-manager.test.js && node test/ws-roundtrip.js",
+    "format": "prettier src/**/* test/**/* --write"
+  },
+  "dependencies": {
+    "@serialport/parser-byte-length": "^13.0.0",
+    "@serialport/parser-delimiter": "^13.0.0",
+    "@serialport/parser-inter-byte-timeout": "^13.0.0",
+    "@serialport/parser-readline": "^13.0.0",
+    "@serialport/parser-ready": "^13.0.0",
+    "@serialport/parser-regex": "^13.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "fast-xml-parser": "^4.5.0",
+    "serialport": "^13.0.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "prettier": "3.9.6"
+  }
+}
